@@ -17,5 +17,5 @@ I trained the model on Google Colab. If you want to train your own models on col
 You can use the trained model to get results on your custom images. <br>
 Step 1: clone the CSAIL Vision's [semantic segmentation pipeline](https://github.com/CSAILVision/semantic-segmentation-pytorch). <br>
 Step 2: Edit the HRNet config file in the cloned repo (config/ade20k-hrnetv2.yaml). Or use the [one in this repo](./config/aerial-sseg.yaml). <br>
-Step 3: Download the checkpoint <br>
+Step 3: Update the checkpoint path in config file. Use the chekpoint present in the checkpoint folder. <br>
 Step 4: Run the CSAIL Vision's test.py: python test.py --gpu 0 --cfg path-to-config-file --imgs path-to-images-directory
