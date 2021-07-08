@@ -1,6 +1,6 @@
 # Semantic Segmentation on aerial (drone) images
 
-You can use this repo to generate semantic segmentations on drone images. The model was trained using publicly available [Semantic Drone Dataset](http://dronedataset.icg.tugraz.at/). For training, I trained the model on HRNet using the amazing CSAIL Vision's [semantic segmentation pipeline] (https://github.com/CSAILVision/semantic-segmentation-pytorch). <br>
+You can use this repo to generate semantic segmentations on drone images. The model was trained using publicly available [Semantic Drone Dataset](http://dronedataset.icg.tugraz.at/). For training, I trained the model on HRNet using the amazing CSAIL Vision's [semantic segmentation pipeline](https://github.com/CSAILVision/semantic-segmentation-pytorch). <br>
 I trained the model on Google Colab. If you want to train your own models on colab using this pipeline, please see the [train_on_colab.ipynb](train_on_colab.ipynb) notebook. Note that we will be saving all the checkpoints on Google drive, as the files are deleted everytime colab environment is reset. For longer trainings, don't save checkpoint for every epoch, as it can fill up your google drive quickly.
 
 ### Some Results on validation data
