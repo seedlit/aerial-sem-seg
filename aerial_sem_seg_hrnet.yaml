@@ -1,0 +1,42 @@
+DATASET:
+  root_dataset: "/content/gdrive/MyDrive/drone_sseg_training_data/drone_data/dataset/semantic_drone_dataset/"
+  list_train: "/content/gdrive/MyDrive/drone_sseg_training_data/drone_data/dataset/semantic_drone_dataset/training.odgt"
+  list_val: "/content/gdrive/MyDrive/drone_sseg_training_data/drone_data/dataset/semantic_drone_dataset/validation.odgt"
+  num_class: 30
+  imgSizes: (300, 600, 800, 1200)
+  imgMaxSize: 1200
+  padding_constant: 32
+  segm_downsampling_rate: 4
+  random_flip: True
+
+MODEL:
+  arch_encoder: "hrnetv2"
+  arch_decoder: "c1"
+  fc_dim: 720
+
+TRAIN:
+  batch_size_per_gpu: 2
+  num_epoch: 100
+  start_epoch: 0
+  epoch_iters: 180
+  optim: "SGD"
+  lr_encoder: 0.02
+  lr_decoder: 0.02
+  lr_pow: 0.9
+  beta1: 0.9
+  weight_decay: 1e-4
+  deep_sup_scale: 0.4
+  fix_bn: False
+  workers: 16
+  disp_iter: 20
+  seed: 304
+
+VAL:
+  visualize: True
+  checkpoint: "epoch_30.pth"
+
+TEST:
+  checkpoint: "epoch_89.pth"
+  result: "/content/gdrive/MyDrive/drone_sseg_training_data/result"
+
+DIR: "/content/gdrive/MyDrive/drone_sseg_training_data/ckpts"
